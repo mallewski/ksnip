@@ -18,7 +18,6 @@
  */
 
 #include "CapturePrinter.h"
-#include <QDebug>
 
 CapturePrinter::CapturePrinter(QWidget *parent) : mParent(parent)
 {
@@ -30,7 +29,6 @@ void CapturePrinter::print(const QImage &image, const QString &defaultPath)
     Q_UNUSED(defaultPath)
     QPrinter printer;
     printer.setOutputFormat(QPrinter::NativeFormat);
-	qDebug() << "PRINT-DEBUG outputFileName=" << printer.outputFileName() << "outputFormat=" << printer.outputFormat() << "printerName=" << printer.printerName();
     QPrintDialog printDialog(&printer, mParent);
 
     if (printDialog.exec() == QDialog::Accepted) {
