@@ -26,8 +26,8 @@ CapturePrinter::CapturePrinter(QWidget *parent) : mParent(parent)
 
 void CapturePrinter::print(const QImage &image, const QString &defaultPath)
 {
+    Q_UNUSED(defaultPath)
     QPrinter printer;
-    printer.setOutputFileName(defaultPath);
     printer.setOutputFormat(QPrinter::NativeFormat);
     QPrintDialog printDialog(&printer, mParent);
 
