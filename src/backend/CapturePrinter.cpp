@@ -18,6 +18,7 @@
  */
 
 #include "CapturePrinter.h"
+#include <QDebug>
 
 CapturePrinter::CapturePrinter(QWidget *parent) : mParent(parent)
 {
