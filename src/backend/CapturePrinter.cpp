@@ -53,7 +53,7 @@ void CapturePrinter::printCapture(const QImage &image, QPrinter *p)
     painter.end();
 }
 
-void CapturePrinter::printPreview(const QImage &image, const QString &defaultPath)
+void CapturePrinter::printPreview(const QImage &image)
 {
     QPrinter printer;
     printer.setOutputFileName(defaultPath);
