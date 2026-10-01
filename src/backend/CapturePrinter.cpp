@@ -24,7 +24,7 @@ CapturePrinter::CapturePrinter(QWidget *parent) : mParent(parent)
 	Q_ASSERT(mParent != nullptr);
 }
 
-void CapturePrinter::print(const QImage &image, const QString &defaultPath)
+void CapturePrinter::print(const QImage &image)
 {
     QPrinter printer;
     printer.setOutputFileName(defaultPath);
